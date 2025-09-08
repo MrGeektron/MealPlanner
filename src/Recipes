@@ -9,7 +9,7 @@ Fried Pork Chops, false, 4, 100
 Tuna Salad, false, 4, 100
 Nachos, false, 6, 100
 Mac and Cheese, false, 4, 100
-Stuffed French Toast, false, 4, 100
+Stuffed French Toast, false, 4, 95
 Simple Beef Chili, false, 4, 100
 Meatloaf, false, 3, 100
 Quesadilla, false, 4, 100
@@ -37,4 +37,4 @@ PB&J, true, 4, 100
 Lentil Pasta, true, 4, 100
 Lentil Soup, true, 4, 100
 Garlicky Rosemary Potato Soup, true, 4, 100
-New Recipe, true, 4, 100
+New Recipe, true, 4, 90

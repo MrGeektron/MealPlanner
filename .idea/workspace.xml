@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea2c3ccd-e408-4aef-a860-be2946a4d656" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MealPlanner.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RecipeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RecipeSelector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recipes" afterDir="false" />
+    <list default="true" id="ea2c3ccd-e408-4aef-a860-be2946a4d656" name="Changes" comment="Add Basic Functionality for a Command Line Meal Picker">
+      <change afterPath="$PROJECT_DIR$/src/MealPlannerGUI.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/TestWeight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RecipeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecipeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RecipeSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecipeSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Recipes" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recipes" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +37,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/geekt/IdeaProjects/MealPlanner/src"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\geekt\IdeaProjects\MealPlanner\src" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -79,6 +80,14 @@
       <option name="presentableId" value="Default" />
       <updated>1755642697021</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add Basic Functionality for a Command Line Meal Picker">
+      <created>1757369298111</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757369298111</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -91,6 +100,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Basic Functionality for a Command Line Meal Picker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Basic Functionality for a Command Line Meal Picker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

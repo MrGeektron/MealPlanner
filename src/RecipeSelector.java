@@ -20,30 +20,40 @@ public class RecipeSelector {
         }
     }
 
-    public ArrayList<Recipe> getRecipes(int days, boolean fasting) {
+    /**
+     * Randomly select a recipe from the fast-friendly or fast-free recipes based on the recipes current weights.
+     * @param meals Number of meals to provide recipes for.
+     * @param fasting Whether the meals are selected from the fast-friendly or fast-free recipes.
+     * @return A list of the recipes selected randomly by weight.
+     */
+    public ArrayList<Recipe> getRecipes(int meals, boolean fasting) {
         ArrayList<Recipe> recipes = new ArrayList<>();
         Random random = new Random();
         if(fasting) {
-            while(days > 0) {
+            while(meals > 0) {
                 int randIndex = random.nextInt(fastingTotalWeight);
-                Recipe newRecipe = incrementWeightedRecipe(this.fastingRecipes, randIndex);
+                Recipe newRecipe = selectWeightedRecipe(this.fastingRecipes, randIndex);
                 recipes.add(newRecipe);
                 fastingTotalWeight -= 5;
-                days -= newRecipe.getServings();
+                meals -= newRecipe.getServings();
             }
         } else {
-            while(days > 0) {
+            while(meals > 0) {
                 int randIndex = random.nextInt(fastFreeTotalWeight);
-                Recipe newRecipe = incrementWeightedRecipe(this.fastFreeRecipes, randIndex);
+                Recipe newRecipe = selectWeightedRecipe(this.fastFreeRecipes, randIndex);
                 recipes.add(newRecipe);
                 fastFreeTotalWeight -= 5;
-                days -= newRecipe.getServings();
+                meals -= newRecipe.getServings();
             }
 
         }
         return recipes;
     }
 
+    /**
+     * Resets the weights of the provided recipes to their default and updates the total weight to the default based on the number of recipes..
+     * @param recipes A list of recipes to reset the weights to default.
+     */
     private void resetWeights(ArrayList<Recipe> recipes) {
         for(Recipe recipe : recipes) {
             recipe.resetWeight();
@@ -56,10 +66,16 @@ public class RecipeSelector {
         }
     }
 
-    private Recipe incrementWeightedRecipe(ArrayList<Recipe> recipes, int index) {
+    /**
+     * Increments through a list of recipes until a random recipe is selected based on weight.
+     * @param recipes The list of recipes to traverse through.
+     * @param weight The total weight to check against when traversing recipes.
+     * @return A recipe that matches the provided weight.
+     */
+    private Recipe selectWeightedRecipe(ArrayList<Recipe> recipes, int weight) {
         for(Recipe recipe : recipes) {
-            index -= recipe.getWeight();
-            if(index <= 0) {
+            weight -= recipe.getWeight();
+            if(weight <= 0) {
                 recipe.decrementWeight();
                 if(recipe.getWeight() <= 0) {
                     resetWeights(recipes);

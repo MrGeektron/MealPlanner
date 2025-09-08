@@ -18,6 +18,9 @@ public class RecipeManager {
         fastFreeRecipes = new ArrayList<>();
     }
 
+    /**
+     * Loads Recipes from the "Recipes" file and stores them for later querying.
+     */
     public void loadRecipes() {
         try {
             File recipeFile = new File("src/Recipes");
@@ -40,19 +43,29 @@ public class RecipeManager {
         }
     }
 
+    /**
+     * Prompts user for input and prints a list of randomly selected weighted recipes.
+     */
     public void receiveInput() {
         totalFastMeals = receiveMeals("Fast Meals");
         totalFastFreeMeals = receiveMeals("Fast Free Meals");
         printSelectedRecipes();
+        MealPlannerGUI UI = new MealPlannerGUI();
         writeToFile();
     }
 
+    /**
+     * Prints randomly selected weighted recipes.
+     */
     public void printSelectedRecipes() {
         RecipeSelector recipeSelector = new RecipeSelector(fastingRecipes, fastFreeRecipes);
         System.out.println(recipeSelector.getRecipes(totalFastMeals, true));
         System.out.println(recipeSelector.getRecipes(totalFastFreeMeals, false));
     }
 
+    /**
+     * Writes recipes changes to the "Recipes" file.
+     */
     private void writeToFile() {
         try {
             File recipesFile = new File("src/Recipes");
@@ -69,6 +82,11 @@ public class RecipeManager {
         }
     }
 
+    /**
+     * Prints the prompt for user to provide number of fast or fast-free meals.
+     * @param mealString A description of the meal to be added at the end of the prompt.
+     * @return The number of meals for the given prompt.
+     */
     public int receiveMeals(String mealString) {
         Scanner userInput = new Scanner(System.in);
         int days;
