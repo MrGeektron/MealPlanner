@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea2c3ccd-e408-4aef-a860-be2946a4d656" name="Changes" comment="Add Basic Functionality for a Command Line Meal Picker">
-      <change afterPath="$PROJECT_DIR$/src/MealPlannerGUI.java" afterDir="false" />
+    <list default="true" id="ea2c3ccd-e408-4aef-a860-be2946a4d656" name="Changes" comment="Add Javadoc to methods">
+      <change afterPath="$PROJECT_DIR$/src/DisplayRecipes.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/TestWeight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MealPlannerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MealPlannerGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RecipeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecipeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RecipeSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecipeSelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Recipes" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recipes" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,16 +37,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/geekt/IdeaProjects/MealPlanner/src"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/geekt/IdeaProjects/MealPlanner/src&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\geekt\IdeaProjects\MealPlanner\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -87,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1757369298111</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Javadoc to methods">
+      <created>1757371804237</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757371804237</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,7 +113,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Basic Functionality for a Command Line Meal Picker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Basic Functionality for a Command Line Meal Picker" />
+    <MESSAGE value="Add Javadoc to methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Javadoc to methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,12 +10,14 @@ public class RecipeManager {
     int totalFastFreeMeals;
     ArrayList<Recipe> fastingRecipes;
     ArrayList<Recipe> fastFreeRecipes;
+    String fileName;
 
     public RecipeManager() {
         this.totalFastMeals = 0;
         this.totalFastFreeMeals = 0;
         fastingRecipes = new ArrayList<>();
         fastFreeRecipes = new ArrayList<>();
+        this.fileName = "src/Recipes";
     }
 
     /**
@@ -23,7 +25,7 @@ public class RecipeManager {
      */
     public void loadRecipes() {
         try {
-            File recipeFile = new File("src/Recipes");
+            File recipeFile = new File(fileName);
             Scanner recipeReader = new Scanner(recipeFile);
             while (recipeReader.hasNextLine()) {
                 String recipeInfo = recipeReader.nextLine();
@@ -47,10 +49,8 @@ public class RecipeManager {
      * Prompts user for input and prints a list of randomly selected weighted recipes.
      */
     public void receiveInput() {
-        totalFastMeals = receiveMeals("Fast Meals");
-        totalFastFreeMeals = receiveMeals("Fast Free Meals");
+        MealPlannerGUI UI = new MealPlannerGUI(this);
         printSelectedRecipes();
-        MealPlannerGUI UI = new MealPlannerGUI();
         writeToFile();
     }
 
@@ -64,11 +64,29 @@ public class RecipeManager {
     }
 
     /**
+     * Generates randomly selected recipes and returns the recipes.
+     * @param totalFastMeals The number of servings of fast meals to generate
+     * @param totalFastFreeMeals The number of servings of fast-free meals to generate
+     * @return A String with the fast and fast-free meals
+     */
+    public ArrayList<Recipe> selectedRecipes(int totalFastMeals, int totalFastFreeMeals) {
+        RecipeSelector recipeSelector = new RecipeSelector(fastingRecipes, fastFreeRecipes);
+        ArrayList<Recipe> recipes = recipeSelector.getRecipes(totalFastMeals, true);
+        recipes.addAll(recipeSelector.getRecipes(totalFastFreeMeals, false));
+        writeToFile();
+        return recipes;
+    }
+
+    public ArrayList<Recipe> previewRecipes (int totalFastMeals, int totalFastFreeMeals) {
+        return null;
+    }
+
+    /**
      * Writes recipes changes to the "Recipes" file.
      */
     private void writeToFile() {
         try {
-            File recipesFile = new File("src/Recipes");
+            File recipesFile = new File(fileName);
             FileWriter recipeWriter = new FileWriter(recipesFile);
             for(Recipe recipe : fastFreeRecipes) {
                 recipeWriter.write(recipe.exportRecipe() + "\n");
@@ -81,24 +99,4 @@ public class RecipeManager {
             System.err.println("An error occurred.");
         }
     }
-
-    /**
-     * Prints the prompt for user to provide number of fast or fast-free meals.
-     * @param mealString A description of the meal to be added at the end of the prompt.
-     * @return The number of meals for the given prompt.
-     */
-    public int receiveMeals(String mealString) {
-        Scanner userInput = new Scanner(System.in);
-        int days;
-        System.out.println("Provide the number of " + mealString + ":");
-        while(!userInput.hasNextInt()) {
-            userInput.nextLine();
-            System.out.println("You entered an invalid input.");
-            System.out.println("Provide the number of " + mealString + ":");
-        }
-        days = userInput.nextInt();
-        userInput.nextLine();
-        return days;
-    }
-
 }

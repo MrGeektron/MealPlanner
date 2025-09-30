@@ -52,7 +52,7 @@ public class Recipe {
 
     @Override
     public String toString() {
-        return recipeName + " " + servings + "\n";
+        return recipeName + "\n";
     }
 
     /**
