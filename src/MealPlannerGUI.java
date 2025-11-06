@@ -109,7 +109,10 @@ public class MealPlannerGUI implements ActionListener {
             }
         }
         if(e.getActionCommand().equals("Generate Recipes")) {
-            DisplayRecipes displayRecipes = new DisplayRecipes(recipeManager.selectedRecipes(fastMeals, fastFreeMeals));
+            DisplayRecipes displayRecipes = new DisplayRecipes(recipeManager.selectedRecipes(fastMeals, fastFreeMeals), this);
+        }
+        if(e.getActionCommand().equals("Regenerate Recipes")) {
+            DisplayRecipes displayRecipes = new DisplayRecipes(recipeManager.selectedRecipes(fastMeals, fastFreeMeals), this);
         }
     }
 }
