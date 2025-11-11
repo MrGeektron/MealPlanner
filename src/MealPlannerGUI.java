@@ -3,7 +3,6 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -35,7 +34,7 @@ public class MealPlannerGUI implements ActionListener {
         JFrame mealSelector = new JFrame();
         mealSelector.setSize(500,250);
         mealSelector.setLayout(new BorderLayout());
-        mealSelector.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        mealSelector.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         JLabel fastMealsText = new JLabel("Enter the number of fasting meals");
         JLabel fastFreeMealsText = new JLabel("Enter the number of fast-free meals");
         fastMealsText.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -65,7 +64,6 @@ public class MealPlannerGUI implements ActionListener {
         textInputPanel.add(Box.createRigidArea(new Dimension(0,5)));
         textInputPanel.add(generateRecipesButton);
         mealSelector.add(textInputPanel, BorderLayout.CENTER);
-        textInputPanel.setVisible(true);
         mealSelector.setVisible(true);
     }
 

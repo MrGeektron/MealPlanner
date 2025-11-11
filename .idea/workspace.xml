@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea2c3ccd-e408-4aef-a860-be2946a4d656" name="Changes" comment="Add Javadoc to methods">
-      <change afterPath="$PROJECT_DIR$/src/DisplayRecipes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestWeight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainPageGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DisplayRecipes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayRecipes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MealPlannerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MealPlannerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RecipeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecipeManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Recipes" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recipes" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
