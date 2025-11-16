@@ -9,16 +9,21 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.WindowConstants;
 
 public class MainPageGUI implements ActionListener {
 
     private final RecipeManager recipeManager;
+    private final String recipeFile;
 
     public MainPageGUI() {
-        recipeManager = new RecipeManager();
+        recipeFile = "src/Recipes";
+        recipeManager = new RecipeManager(recipeFile);
         JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(500, 500);
         JButton addButton = new JButton("Add Recipe");
+        addButton.setActionCommand("Add Recipe");
         addButton.addActionListener(this);
         addButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         JButton generateRecipesButton = new JButton("Generate Recipes");
@@ -44,8 +49,11 @@ public class MainPageGUI implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("Generate Recipes")) {
+        if(e.getActionCommand().equals("Generate Recipes")) {
          generateRecipes();
+        }
+        else if(e.getActionCommand().equals("Add Recipe")) {
+        new AddRecipeGUI(recipeFile);
         }
     }
 }
