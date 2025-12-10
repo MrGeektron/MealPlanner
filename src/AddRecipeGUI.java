@@ -45,7 +45,6 @@ public class AddRecipeGUI  implements ActionListener {
         enterRecipeButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         cancelButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         JPanel recipeInputPanel = new JPanel();
-        //recipeInputPanel.setBackground(Color.blue);
         recipeInputPanel.setLayout(new BoxLayout(recipeInputPanel, BoxLayout.PAGE_AXIS));
         recipeInputPanel.add(recipeNameLabel);
         recipeInputPanel.add(Box.createRigidArea(new Dimension(0, 5)));
@@ -60,12 +59,10 @@ public class AddRecipeGUI  implements ActionListener {
         recipeInputPanel.add(enterRecipeButton);
         recipeInputPanel.add(cancelButton);
         JPanel buttonPanel = new JPanel();
-        //buttonPanel.setBackground(Color.yellow);
         buttonPanel.add(enterRecipeButton);
         buttonPanel.add(cancelButton);
         recipeInputPanel.add(buttonPanel);
         JPanel titlePanel = new JPanel();
-        //titlePanel.setBackground(Color.red);
         titlePanel.add(new JLabel("<html><b>Add a Recipe</b></html>"));
         AddRecipeGUIFrame.add(titlePanel, BorderLayout.PAGE_START);
         AddRecipeGUIFrame.add(recipeInputPanel, BorderLayout.CENTER);
