@@ -12,12 +12,12 @@ public class RecipeManager {
     ArrayList<Recipe> fastFreeRecipes;
     String fileName;
 
-    public RecipeManager() {
+    public RecipeManager(String recipeFileName) {
         this.totalFastMeals = 0;
         this.totalFastFreeMeals = 0;
         fastingRecipes = new ArrayList<>();
         fastFreeRecipes = new ArrayList<>();
-        this.fileName = "src/Recipes";
+        this.fileName = recipeFileName;
     }
 
     /**
@@ -87,7 +87,7 @@ public class RecipeManager {
     private void writeToFile() {
         try {
             File recipesFile = new File(fileName);
-            FileWriter recipeWriter = new FileWriter(recipesFile);
+            FileWriter recipeWriter = new FileWriter(recipesFile, false);
             for(Recipe recipe : fastFreeRecipes) {
                 recipeWriter.write(recipe.exportRecipe() + "\n");
             }

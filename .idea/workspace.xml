@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea2c3ccd-e408-4aef-a860-be2946a4d656" name="Changes" comment="Updated to use a GUI for input and output instead of a CLI">
+    <list default="true" id="ea2c3ccd-e408-4aef-a860-be2946a4d656" name="Changes" comment="Added an add recipe frame and added it to the main page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DisplayRecipes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayRecipes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MealPlannerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MealPlannerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddRecipeGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddRecipeGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Recipes" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recipes" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,14 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1757371804237</updated>
     </task>
-    <task id="LOCAL-00003" summary="Updated to use a GUI for input and output instead of a CLI">
-      <created>1759191564255</created>
+    <task id="LOCAL-00003" summary="Added frame for main page with a couple of buttons">
+      <created>1762821992517</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1759191564255</updated>
+      <updated>1762821992517</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added an add recipe frame and added it to the main page">
+      <created>1763256277433</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763256277433</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,8 +129,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Basic Functionality for a Command Line Meal Picker" />
     <MESSAGE value="Add Javadoc to methods" />
-    <MESSAGE value="Updated to use a GUI for input and output instead of a CLI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated to use a GUI for input and output instead of a CLI" />
+    <MESSAGE value="Added frame for main page with a couple of buttons" />
+    <MESSAGE value="Added an add recipe frame and added it to the main page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added an add recipe frame and added it to the main page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,9 +1,9 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -17,6 +17,7 @@ import javax.swing.WindowConstants;
 
 public class MealPlannerGUI implements ActionListener {
 
+    private JFrame mealSelector;
     private JLabel fastMealsDisplayLabel;
     private JLabel fastFreeMealsDisplayLabel;
     private int fastMeals;
@@ -32,10 +33,10 @@ public class MealPlannerGUI implements ActionListener {
     }
 
     private void createMealInputWindow() {
-        JFrame mealSelector = new JFrame();
+        mealSelector = new JFrame();
         mealSelector.setSize(500,250);
         mealSelector.setLayout(new BorderLayout());
-        mealSelector.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        mealSelector.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         JLabel fastMealsText = new JLabel("Enter the number of fasting meals");
         JLabel fastFreeMealsText = new JLabel("Enter the number of fast-free meals");
         fastMealsText.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -44,9 +45,16 @@ public class MealPlannerGUI implements ActionListener {
         JButton enterButton = new JButton("Enter");
         enterButton.setActionCommand("Enter");
         enterButton.addActionListener(this);
+        JButton cancelButton = new JButton("Cancel");
+        cancelButton.setActionCommand("Cancel");
+        cancelButton.addActionListener(this);
         enterButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         initializeGenerateRecipesButton();
         JPanel textInputPanel = new JPanel();
+        JPanel submissionButtonPanel = new JPanel();
+        submissionButtonPanel.add(enterButton);
+        submissionButtonPanel.add(cancelButton);
+        submissionButtonPanel.setBackground(Color.blue);
         textInputPanel.setLayout(new BoxLayout(textInputPanel, BoxLayout.PAGE_AXIS));
         textInputPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         textInputPanel.add(fastMealsText);
@@ -57,15 +65,15 @@ public class MealPlannerGUI implements ActionListener {
         textInputPanel.add(Box.createRigidArea(new Dimension(0,5)));
         textInputPanel.add(fastFreeMealsInputField);
         textInputPanel.add(Box.createRigidArea(new Dimension(0,5)));
-        textInputPanel.add(enterButton);
+        textInputPanel.add(submissionButtonPanel);
         textInputPanel.add(Box.createRigidArea(new Dimension(0,5)));
         textInputPanel.add(fastMealsDisplayLabel);
         textInputPanel.add(Box.createRigidArea(new Dimension(0,5)));
         textInputPanel.add(fastFreeMealsDisplayLabel);
         textInputPanel.add(Box.createRigidArea(new Dimension(0,5)));
         textInputPanel.add(generateRecipesButton);
+        textInputPanel.add(Box.createRigidArea(new Dimension(0, 5)));
         mealSelector.add(textInputPanel, BorderLayout.CENTER);
-        textInputPanel.setVisible(true);
         mealSelector.setVisible(true);
     }
 
@@ -77,7 +85,7 @@ public class MealPlannerGUI implements ActionListener {
         generateRecipesButton.setEnabled(false);
     }
 
-    public void initializeFastMealsInput() {
+    private void initializeFastMealsInput() {
         this.fastMealsInputField = new JTextField();
         this.fastMealsInputField.setHorizontalAlignment(SwingConstants.CENTER);
         this.fastMealsInputField.setMaximumSize(new Dimension(100, 100));
@@ -113,6 +121,9 @@ public class MealPlannerGUI implements ActionListener {
         }
         if(e.getActionCommand().equals("Regenerate Recipes")) {
             DisplayRecipes displayRecipes = new DisplayRecipes(recipeManager.selectedRecipes(fastMeals, fastFreeMeals), this);
+        }
+        else if(e.getActionCommand().equals("Cancel")) {
+            mealSelector.dispose();
         }
     }
 }

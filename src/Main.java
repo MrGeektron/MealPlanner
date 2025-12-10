@@ -1,9 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        RecipeManager manager = new RecipeManager();
-        manager.loadRecipes();
-        manager.receiveInput();
+        MainPageGUI mainPageGUI = new MainPageGUI();
+        //AddRecipeGUI addRecipeGUI = new AddRecipeGUI("src/Recipes");
     }
 
 }

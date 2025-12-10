@@ -27,13 +27,13 @@ public class DisplayRecipes {
         recipeDisplay.add(recipePanel);
     }
     private String buildRecipeList(ArrayList<Recipe> recipes) {
-        StringBuilder recipelist = new StringBuilder();
-        recipelist.append("<html>Selected Recipes<ul>");
+        StringBuilder recipeList = new StringBuilder();
+        recipeList.append("<html>Selected Recipes<ul>");
         for(Recipe recipe : recipes) {
-            recipelist.append("<li>").append(recipe);
+            recipeList.append("<li>").append(recipe);
         }
-        recipelist.append("</ul></html>");
-        return recipelist.toString();
+        recipeList.append("</ul></html>");
+        return recipeList.toString();
     }
 
 }
