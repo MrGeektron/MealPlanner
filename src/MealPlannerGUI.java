@@ -116,8 +116,11 @@ public class MealPlannerGUI implements ActionListener {
                 //TODO: Display Error Message
             }
         }
-        else if(e.getActionCommand().equals("Generate Recipes")) {
-            DisplayRecipes displayRecipes = new DisplayRecipes(recipeManager.selectedRecipes(fastMeals, fastFreeMeals));
+        if(e.getActionCommand().equals("Generate Recipes")) {
+            DisplayRecipes displayRecipes = new DisplayRecipes(recipeManager.selectedRecipes(fastMeals, fastFreeMeals), this);
+        }
+        if(e.getActionCommand().equals("Regenerate Recipes")) {
+            DisplayRecipes displayRecipes = new DisplayRecipes(recipeManager.selectedRecipes(fastMeals, fastFreeMeals), this);
         }
         else if(e.getActionCommand().equals("Cancel")) {
             mealSelector.dispose();
